@@ -7,7 +7,7 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "test": "jest",
-    "lint:run": "./node_modules/.bin/eslint . --ext .js,.jsx || exit 0"
+    "lint:run": "./node_modules/.bin/eslint . --ext .ts,.tsx || exit 0"
   },
   "jest": {
     "preset": "react-native"

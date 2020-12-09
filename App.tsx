@@ -1,11 +1,15 @@
 import React from 'react';
-import { View } from 'react-native';
-import Main from './src/pages/Main';
+import { View, StyleSheet } from 'react-native';
+import Main from './src/pages/Calculator';
 
 export default function App() {
   return (
-    <View>
+    <View style={styles.container}>
       <Main />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: { flex: 1, justifyContent: 'flex-end' },
+});
