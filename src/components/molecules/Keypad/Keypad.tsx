@@ -1,186 +1,159 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { View } from 'react-native';
 import Button from '../../atoms/Button';
+import styles from './styles';
 
-const styles = StyleSheet.create({
-  container: {
-    margin: 5,
-  },
-  row: {
-    flex: 1,
-    flexDirection: 'row',
-  },
-  button: {
-    flex: 1,
-    margin: 5,
-    backgroundColor: '#F2F2F2',
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: '#E1E1E1',
-  },
-  font: {
-    color: '#555555',
-    fontSize: 30,
-    fontWeight: '500',
-  },
-  clear: {
-    color: '#E4684C',
-  },
-  operator: {
-    color: '#569415',
-  },
-  equalButton: {
-    backgroundColor: '#68B31A',
-    borderColor: '#75A444',
-  },
-  equalFont: {
-    color: '#FAFAFA',
-  },
-});
+interface keypadProps {
+  handlePress: (type: string, value: any) => void;
+}
 
 /**
  * 계산기 입력부
  */
-const Keypad = () => {
-  const handlePress = (type: string, value: any = null) => {
-    console.log(type);
-    console.log(value);
+const Keypad: React.FC<keypadProps> = (props: keypadProps) => {
+  const handlePress = (type: string, value = '') => {
+    props.handlePress(type, value);
   };
 
   return (
     <View style={styles.container}>
+      {/* ROW 1 */}
       <View style={styles.row}>
         <Button
-          fontStyle={[styles.font, styles.clear]}
-          buttonStyle={styles.button}
+          customStyle={{
+            text: [styles.text, styles.clear],
+            button: styles.button,
+          }}
           text='C'
-          pressFunction={() => handlePress('clear')}
+          handlePress={() => handlePress('clear')}
         />
         <Button
-          fontStyle={[styles.font, styles.operator]}
-          buttonStyle={styles.button}
+          customStyle={{
+            text: [styles.text, styles.operator],
+            button: styles.button,
+          }}
           text='()'
-          pressFunction={() => handlePress('bracket')}
+          handlePress={() => handlePress('bracket')}
         />
         <Button
-          fontStyle={[styles.font, styles.operator]}
-          buttonStyle={styles.button}
+          customStyle={{
+            text: [styles.text, styles.operator],
+            button: styles.button,
+          }}
           text='%'
-          pressFunction={() => handlePress('percentage')}
+          handlePress={() => handlePress('percentage')}
         />
         <Button
-          fontStyle={[styles.font, styles.operator]}
-          buttonStyle={styles.button}
+          customStyle={{
+            text: [styles.text, styles.operator],
+            button: styles.button,
+          }}
           text='÷'
-          pressFunction={() => handlePress('operator', '/')}
+          handlePress={() => handlePress('operator', '/')}
         />
       </View>
-
+      {/* ROW 2 */}
       <View style={styles.row}>
         <Button
-          fontStyle={styles.font}
-          buttonStyle={styles.button}
+          customStyle={{ text: styles.text, button: styles.button }}
           text='7'
-          pressFunction={() => handlePress('number', 7)}
+          handlePress={() => handlePress('number', 7)}
         />
         <Button
-          fontStyle={styles.font}
-          buttonStyle={styles.button}
+          customStyle={{ text: styles.text, button: styles.button }}
           text='8'
-          pressFunction={() => handlePress('number', 8)}
+          handlePress={() => handlePress('number', 8)}
         />
         <Button
-          fontStyle={styles.font}
-          buttonStyle={styles.button}
+          customStyle={{ text: styles.text, button: styles.button }}
           text='9'
-          pressFunction={() => handlePress('number', 9)}
+          handlePress={() => handlePress('number', 9)}
         />
         <Button
-          fontStyle={[styles.font, styles.operator]}
-          buttonStyle={styles.button}
+          customStyle={{
+            text: [styles.text, styles.operator],
+            button: styles.button,
+          }}
           text='×'
-          pressFunction={() => handlePress('operator', '*')}
+          handlePress={() => handlePress('operator', '*')}
         />
       </View>
-
+      {/* ROW 3 */}
       <View style={styles.row}>
         <Button
-          fontStyle={styles.font}
-          buttonStyle={styles.button}
+          customStyle={{ text: styles.text, button: styles.button }}
           text='4'
-          pressFunction={() => handlePress('number', 4)}
+          handlePress={() => handlePress('number', 4)}
         />
         <Button
-          fontStyle={styles.font}
-          buttonStyle={styles.button}
+          customStyle={{ text: styles.text, button: styles.button }}
           text='5'
-          pressFunction={() => handlePress('number', 5)}
+          handlePress={() => handlePress('number', 5)}
         />
         <Button
-          fontStyle={styles.font}
-          buttonStyle={styles.button}
+          customStyle={{ text: styles.text, button: styles.button }}
           text='6'
-          pressFunction={() => handlePress('number', 6)}
+          handlePress={() => handlePress('number', 6)}
         />
         <Button
-          fontStyle={[styles.font, styles.operator]}
-          buttonStyle={styles.button}
+          customStyle={{
+            text: [styles.text, styles.operator],
+            button: styles.button,
+          }}
           text='－'
-          pressFunction={() => handlePress('operator', '-')}
+          handlePress={() => handlePress('operator', '-')}
         />
       </View>
-
+      {/* ROW 4 */}
       <View style={styles.row}>
         <Button
-          fontStyle={styles.font}
-          buttonStyle={styles.button}
+          customStyle={{ text: styles.text, button: styles.button }}
           text='1'
-          pressFunction={() => handlePress('number', 1)}
+          handlePress={() => handlePress('number', 1)}
         />
         <Button
-          fontStyle={styles.font}
-          buttonStyle={styles.button}
+          customStyle={{ text: styles.text, button: styles.button }}
           text='2'
-          pressFunction={() => handlePress('number', 2)}
+          handlePress={() => handlePress('number', 2)}
         />
         <Button
-          fontStyle={styles.font}
-          buttonStyle={styles.button}
+          customStyle={{ text: styles.text, button: styles.button }}
           text='3'
-          pressFunction={() => handlePress('number', 3)}
+          handlePress={() => handlePress('number', 3)}
         />
         <Button
-          fontStyle={[styles.font, styles.operator]}
-          buttonStyle={styles.button}
+          customStyle={{
+            text: [styles.text, styles.operator],
+            button: styles.button,
+          }}
           text='＋'
-          pressFunction={() => handlePress('operator', '+')}
+          handlePress={() => handlePress('operator', '+')}
         />
       </View>
-
+      {/* ROW 5 */}
       <View style={styles.row}>
         <Button
-          fontStyle={styles.font}
-          buttonStyle={styles.button}
+          customStyle={{ text: styles.text, button: styles.button }}
           text='＋/－'
-          pressFunction={() => handlePress('posneg')}
+          handlePress={() => handlePress('posneg')}
         />
         <Button
-          fontStyle={styles.font}
-          buttonStyle={styles.button}
+          customStyle={{ text: styles.text, button: styles.button }}
           text='0'
-          pressFunction={() => handlePress('number', 0)}
+          handlePress={() => handlePress('number', 0)}
         />
         <Button
-          fontStyle={styles.font}
-          buttonStyle={styles.button}
+          customStyle={{ text: styles.text, button: styles.button }}
           text='.'
-          pressFunction={() => handlePress('number', '.')}
+          handlePress={() => handlePress('number', '.')}
         />
         <Button
-          fontStyle={[styles.font, styles.equalFont]}
-          buttonStyle={[styles.button, styles.equalButton]}
+          customStyle={{
+            text: [styles.text, styles.equalText],
+            button: [styles.button, styles.equalButton],
+          }}
           text='＝'
-          pressFunction={() => handlePress('equal')}
+          handlePress={() => handlePress('equal')}
         />
       </View>
     </View>
