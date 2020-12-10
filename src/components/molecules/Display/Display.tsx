@@ -29,6 +29,7 @@ const Display: React.FC<displayProps> = (props: displayProps) => {
         style={[styles.input, props.style?.input]}
         onSelectionChange={(event) => props.handleSelectionChange(event)}
         multiline={true}
+        showSoftInputOnFocus={false}
       />
       <Text style={[styles.result, props.style?.result]}>{11111111111}</Text>
     </View>
