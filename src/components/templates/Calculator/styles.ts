@@ -16,7 +16,7 @@ export default StyleSheet.create({
     marginRight: 20,
     marginBottom: 30,
     justifyContent: 'center',
-    fontSize: 20,
+    fontSize: 25,
   },
   deleteWrapper: {
     flex: 1,
@@ -25,8 +25,9 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   deleteButton: {
+    width: 30,
+    height: 25,
     marginRight: 30,
-    borderWidth: 2,
   },
   divider: {
     width: '92%',

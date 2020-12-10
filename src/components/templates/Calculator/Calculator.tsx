@@ -59,7 +59,7 @@ const Calculator: React.FC = () => {
       </View>
       <View style={styles.deleteWrapper}>
         <TouchableOpacity style={styles.deleteButton}>
-          <Text>Del</Text>
+          <Text>DEL</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.divider} />
