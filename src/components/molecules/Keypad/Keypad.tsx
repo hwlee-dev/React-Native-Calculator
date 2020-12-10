@@ -32,7 +32,7 @@ const Keypad: React.FC<keypadProps> = (props: keypadProps) => {
             text: [styles.text, styles.operator],
             button: styles.button,
           }}
-          text='()'
+          text='( )'
           handlePress={() => handlePress('bracket')}
         />
         <Button
