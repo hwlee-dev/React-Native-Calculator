@@ -1,13 +1,12 @@
 import { StyleSheet } from 'react-native';
+import { colors, fonts, margin } from '../../../styles/common';
 
 export default StyleSheet.create({
-  container: {},
-  input: {
-    margin: 5,
-    textAlign: 'right',
-  },
-  result: {
-    margin: 5,
+  container: { flex: 1, justifyContent: 'flex-end' },
+  text: {
+    marginRight: margin.md,
+    color: colors.text,
+    fontSize: fonts.xl,
     textAlign: 'right',
   },
 });
