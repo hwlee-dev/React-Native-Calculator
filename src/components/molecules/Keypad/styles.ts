@@ -1,10 +1,11 @@
 import { StyleSheet } from 'react-native';
+import { margin } from '../../../styles/common';
 
 export default StyleSheet.create({
   container: {
-    margin: 5,
+    margin: margin.xs,
     paddingBottom: 20,
-    height: '51%',
+    height: '60%',
   },
   row: {
     flex: 1,
@@ -12,7 +13,7 @@ export default StyleSheet.create({
   },
   button: {
     flex: 1,
-    margin: 5,
+    margin: margin.xs,
     backgroundColor: '#F2F2F2',
     borderRadius: 40,
     borderWidth: 1,
@@ -29,7 +30,7 @@ export default StyleSheet.create({
   operator: {
     color: '#569415',
   },
-  equalButton: {
+  equalKey: {
     backgroundColor: '#68B31A',
     borderColor: '#75A444',
   },
