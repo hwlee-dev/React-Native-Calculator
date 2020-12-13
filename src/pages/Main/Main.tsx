@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import Calculator from '../../components/templates/Calculator';
 import styles from './styles';
 
-const Main: React.FC = () => {
+const Main = () => {
   return (
     <View style={styles.container}>
       <Calculator />
