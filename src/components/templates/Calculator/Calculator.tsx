@@ -9,7 +9,7 @@ const Calculator = () => {
   const [values, setValues] = useState({
     displayValue: '0',
     previousValue: '',
-    currentValue: '0',
+    currentValue: '',
     operator: '',
   });
 
