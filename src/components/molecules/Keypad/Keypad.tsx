@@ -10,7 +10,7 @@ interface keypadProps {
 
 /**
  * 계산기 키패드
- * @param props => handlePress : 터치 이벤트 처리
+ * @param props handlePress : 터치 이벤트 처리 함수
  */
 const Keypad = (props: keypadProps) => {
   const handlePress = (type: string, value = '') => {

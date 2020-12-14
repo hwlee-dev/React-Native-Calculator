@@ -9,7 +9,7 @@ interface displayProps {
 
 /**
  * 계산기 디스플레이
- * @param param0 => displayValue : 화면에 표시될 값 포함
+ * @param param0 displayValue : 화면에 표시될 값 포함
  */
 const Display = ({ displayValue }: displayProps) => {
   /**
